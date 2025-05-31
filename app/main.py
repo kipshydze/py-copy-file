@@ -9,6 +9,6 @@ def copy_file(command: str) -> None:
         if file_to_copy == copied_file:
             return
         if os.path.exists(file_to_copy):
-            with (open(file_to_copy, "r") as file1,
-                  open(copied_file, "w") as file2):
+            with (open(file_to_copy, "rb") as file1,
+                  open(copied_file, "wb") as file2):
                 file2.write(file1.read())
